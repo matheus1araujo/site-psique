@@ -45,7 +45,7 @@ export default function Home() {
     <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
     {/* LOGO */}
     <Link href="/" className="flex items-center space-x-2">
-      <Image src="/logo.png" alt="Logo Núcleo Psique" className="h-10 w-auto" />
+      <Image src="/logo.png" alt="Logo Núcleo Psique" width="170" height="170"/>
     </Link>
 
     {/* Botão hamburguer visível no mobile */}
