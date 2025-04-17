@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import IMask from 'imask'
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Home() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -51,7 +52,7 @@ export default function Home() {
     {/* Botão hamburguer visível no mobile */}
     <button
       ref={botaoRef}
-      className="text-blue-700 md:hidden text-3xl"
+      className="text-[var(--npr-petrol)] md:hidden text-3xl"
       onClick={() => setMenuAberto(!menuAberto)}
     >
       ☰
@@ -62,10 +63,10 @@ export default function Home() {
         menuAberto ? 'flex' : 'hidden md:flex'
       }`}
     >
-      <Link href="#sobre" onClick={() => setMenuAberto(false)} className="text-gray-700 hover:text-blue-600">Sobre</Link>
-      <Link href="#agendamento" onClick={() => setMenuAberto(false)} className="text-gray-700 hover:text-blue-600">Agendamento</Link>
-      <Link href="/academy" onClick={() => setMenuAberto(false)} className="text-gray-700 hover:text-blue-600">Cursos</Link>
-      <Link href="#contato" onClick={() => setMenuAberto(false)} className="text-gray-700 hover:text-blue-600">Contato</Link>
+      <Link href="#sobre" onClick={() => setMenuAberto(false)} className="text-gray-700 hover:text-[var(--npr-petrol)]">Sobre</Link>
+      <Link href="#agendamento" onClick={() => setMenuAberto(false)} className="text-gray-700 hover:text-[var(--npr-petrol)]">Agendamento</Link>
+      <Link href="#contato" onClick={() => setMenuAberto(false)} className="text-gray-700 hover:text-[var(--npr-petrol)]">Contato</Link>
+      <Link href="/academy" onClick={() => setMenuAberto(false)} className="text-white bg-[var(--npr-petrol)] hover:bg-[var(--npr)] px-4 py-2 rounded-xl font-semibold transition">NPR Academy</Link>
     </nav>
   </div>
 </header>
@@ -75,38 +76,55 @@ export default function Home() {
         <meta name="description" content="Cursos de Psicologia Online com qualidade e profundidade" />
       </Head>
 
-      <main className="bg-white text-gray-900 min-h-screen flex flex-col items-center justify-center px-4 text-center pt-24">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Aprenda Psicologia com Profundidade e Clareza
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
-          Cursos online pensados para estudantes, profissionais e apaixonados por psicologia. Conteúdo acessível, atualizado e com suporte.
-        </p>
-        <Link
-          href="academy"
-          className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition font-semibold"
-        >
-          Conheça os Cursos
-        </Link>
-      </main>
+<section className="bg-white text-gray-900 min-h-screen flex items-start justify-center px-4 pt-32">
+<div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-center">
+    
+    {/* Lado esquerdo – Texto */}
+    <div className="space-y-6 text-center md:text-left px-4 md:pr-10">
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        Atendimento psicológico acolhedor e transformador
+      </h1>
+      <p className="text-lg text-gray-600">
+        Psicoterapia para adultos e adolescentes com escuta ética, empática e fundamentada na psicanálise.
+      </p>
+      <a
+        href="#agendamento"
+        className="inline-block bg-[#136C70] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#265255] transition"
+      >
+        Agende uma sessão
+      </a>
+    </div>
+
+    {/* Lado direito – Imagem Terapeuta*/}
+    <div className="flex justify-center md:justify-end md:mr-[52px]">
+      <img
+        src="/terapeuta.jpg"
+        alt="Terapeuta"
+        className="w-85 h-auto rounded-xl shadow-lg object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
       <Sobre />
 
       <section className="py-20 px-4 text-center bg-white">
-  <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto">
     <h2 className="text-3xl md:text-4xl font-bold mb-4">Conheça a NPR Academy</h2>
     <p className="text-lg text-gray-700 mb-6">
       Cursos online desenvolvidos especialmente para psicólogos(as), estudantes e terapeutas que desejam aprofundar sua prática clínica com sensibilidade e conhecimento atualizado.
     </p>
     <Link 
     href="/academy"
-    className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
+    className="inline-block bg-[var(--npr-petrol)] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[var(--npr)] transition"
     >
         Acessar Cursos
     </Link>
   </div>
 </section>
 
-      <section className="py-20 px-4 bg-gray-50 text-center">
+      <section className="py-20 px-4 bg-[#f2f7f7] text-center">
   <div className="max-w-4xl mx-auto">
     <h2 className="text-3xl md:text-4xl font-bold mb-6">Onde e como atendemos?</h2>
     <p className="text-lg text-gray-700 mb-8">
@@ -153,7 +171,10 @@ export default function Home() {
       rel="noopener noreferrer"
       className="inline-block bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700 transition mb-8"
     >
+      <span className="inline-flex items-center gap-2">
+      <FaWhatsapp className="text-1" />
       Agendar pelo WhatsApp
+      </span>
     </ Link>
 
     {/* Formulário de contato */}
@@ -204,14 +225,14 @@ export default function Home() {
 
   <button
     type="submit"
-    className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition font-semibold"
+    className="bg-[var(--npr-petrol)] text-white px-6 py-3 rounded-xl hover:bg-[var(--npr)] transition font-semibold"
   >
     Enviar
   </button>
   </form>
   </div>
 </section>
-<footer id="contato" className="bg-gray-900 text-white py-10 px-4 mt-20">
+<footer id="contato" className="bg-[#18212b] text-white py-10 px-4 mt-20">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
     <div>
       <h3 className="text-lg font-semibold mb-2">Núcleo Psique do Recife</h3>
@@ -225,7 +246,7 @@ export default function Home() {
     <div>
       <h3 className="text-lg font-semibold mb-2">Contato</h3>
       <p className="text-sm text-gray-300">
-        WhatsApp: (81) 99999-9999<br />
+        WhatsApp: (81) 99730-3032<br />
         E-mail: contato@nucleopsique.com
       </p>
     </div>

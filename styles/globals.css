@@ -7,6 +7,8 @@ html {
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --npr: #265255;
+  --npr-petrol: #136C70;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-principal: 'Lexend Deca', sans-serif;
@@ -14,8 +16,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #0a0a0a;
   }
 }
 

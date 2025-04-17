@@ -1,6 +1,6 @@
 export default function Sobre() {
     return (
-      <section id="sobre" className="bg-gray-100 py-16 px-4 text-center">
+      <section id="sobre" className="bg-[#f2f7f7] py-16 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">O que é o Núcleo Psiquè do Recife?</h2>
           <p className="text-lg text-gray-700 mb-4">
