@@ -76,7 +76,7 @@ export default function Home() {
         <meta name="description" content="Cursos de Psicologia Online com qualidade e profundidade" />
       </Head>
 
-  <section className="py-30 bg-white text-gray-900 flex items-start justify-center px-4">
+  <section className="mt-32 mb-15 bg-white text-gray-900 flex items-start justify-center px-4">
   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-center">
     
     {/* Lado esquerdo – Texto */}
