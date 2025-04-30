@@ -218,7 +218,7 @@ export default function Home() {
 
           {/* Formulário de contato */}
           <form
-            action="https://formsubmit.co/seuemail@gmail.com"
+            action="https://formsubmit.co/nucleopsiquedorecife@gmail.com"
             method="POST"
             className="bg-gray-50 shadow-md rounded-xl p-6 space-y-4 text-left mt-10"
           >
@@ -288,7 +288,7 @@ export default function Home() {
             <h3 className="text-lg font-semibold mb-2">Contato</h3>
             <p className="text-sm text-gray-300">
               WhatsApp: (81) 99730-3032<br />
-              E-mail: contato@nucleopsique.com
+              E-mail: nucleopsiquedorecife@gmail.com
             </p>
           </div>
 
