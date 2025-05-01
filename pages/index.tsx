@@ -70,7 +70,7 @@ export default function Home() {
           {/* Menu de navegação */}
           <nav 
             ref={menuRef} 
-            className={`absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none px-4 py-4 md:py-0 md:px-0 flex-col md:flex-row md:flex items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-base font-semibold z-40 transition-all duration-300 ${
+            className={`absolute md:static top-16 left-0 w-full md:w-auto bg-[var(--npr-petrol)]md:bg-transparent shadow-md md:shadow-none px-4 py-4 md:py-0 md:px-0 flex-col md:flex-row md:flex items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-base font-semibold z-40 transition-all duration-300 ${
               menuAberto ? 'flex' : 'hidden md:flex'
             }`}
           >
@@ -120,16 +120,23 @@ export default function Home() {
           {/* Lado esquerdo – Texto */}
           <div className="space-y-6 text-center md:text-left px-4 md:pr-10">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              Atendimento psicológico acolhedor e transformador
+              Núcleo de Psicoterapia e formação profissional
             </h1>
             <p className="text-lg text-gray-600">
-              Psicoterapia para adultos e adolescentes com escuta ética, empática e fundamentada na psicanálise.
+              Psicoterapia e formação para todos os públicos com escuta ética, empática e acolhedora.
             </p>
             <a
               href="#agendamento"
               className="inline-block bg-[#136C70] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#265255] transition"
             >
               Agende uma sessão
+            </a>
+
+            <a
+              href="#NPRAcademy"
+              className="inline-block px-5 bg-[#136C70] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#265255] transition"
+            >
+              Escolha seu Curso
             </a>
           </div>
 
@@ -295,12 +302,12 @@ export default function Home() {
           <div>
             <h3 className="text-lg font-semibold mb-2">Instagram</h3>
             <Link
-              href="https://www.instagram.com/drromulopsicanalise/"
+              href="https://www.instagram.com/nucleopsiquedorecife/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-pink-600 text-white px-4 py-2 rounded-xl hover:bg-pink-700 transition"
             >
-              @drromulopsicanalise
+              @nucleopsiquedorecife
             </Link>
           </div>
         </div>
