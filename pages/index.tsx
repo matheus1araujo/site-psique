@@ -70,7 +70,7 @@ export default function Home() {
           {/* Menu de navegação */}
           <nav 
             ref={menuRef} 
-            className={`absolute md:static top-16 left-0 w-full md:w-auto bg-[var(--npr-petrol)]md:bg-transparent shadow-md md:shadow-none px-4 py-4 md:py-0 md:px-0 flex-col md:flex-row md:flex items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-base font-semibold z-40 transition-all duration-300 ${
+            className={`absolute md:static top-16 left-0 w-full md:w-auto bg-[var(--background)] md:bg-transparen shadow-md md:shadow-none px-4 py-4 md:py-0 md:px-0 flex-col md:flex-row md:flex items-center justify-center space-y-4 md:space-y-0 md:space-x-4 text-base font-semibold z-40 transition-all duration-300 ${
               menuAberto ? 'flex' : 'hidden md:flex'
             }`}
           >
@@ -114,41 +114,47 @@ export default function Home() {
         <meta name="description" content="Cursos de Psicologia Online com qualidade e profundidade" />
       </Head>
 
-      <section className="py-14 mt-17 bg-white text-gray-900 flex items-start justify-center px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-center">
-          
-          {/* Lado esquerdo – Texto */}
-          <div className="space-y-6 text-center md:text-left px-4 md:pr-10">
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Vídeo de fundo */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/background-neural.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos HTML5.
+        </video>
+
+        {/* Gradiente escuro sobre o vídeo */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#091e24] via-[#0a2025da] to-transparent z-10"></div>
+
+        {/* Conteúdo principal por cima do vídeo */}
+        <div className="relative z-10 max-w-6xl mx-auto h-full flex text-center md:text-start items-center justify-start px-6">
+          <div className="text-white space-y-6 max-w-2xl">
+            <h1 className="text-4xl md:text-5x font-bold leading-tight">
               Núcleo de Psicoterapia e formação profissional
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-white/90">
               Psicoterapia e formação para todos os públicos com escuta ética, empática e acolhedora.
             </p>
-            <a
-              href="#agendamento"
-              className="inline-block bg-[#136C70] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#265255] transition"
-            >
-              Agende uma sessão
-            </a>
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 ">
+              <a
+                href="#agendamento"
+                className="bg-[#2a9d8f] hover:bg-[#21867a] shadow-md focus:ring-2 focus:ring-offset-2 focus:ring-white text-white px-6 py-3 rounded-xl font-semibold transition"
+              >
+                Agende uma sessão
+              </a>
 
-            <a
-              href="#NPRAcademy"
-              className="inline-block px-5 bg-[#136C70] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#265255] transition"
-            >
-              Escolha seu Curso
-            </a>
+              <a
+                href="#NPRAcademy"
+                className="bg-[#2a9d8f] hover:bg-[#21867a] shadow-md focus:ring-2 focus:ring-offset-2 focus:ring-white text-white px-6 py-3 rounded-xl font-semibold transition"
+              >
+                Escolha seu Curso
+              </a>
+            </div>
           </div>
-
-          {/* Lado direito – Imagem Terapeuta*/}
-          <div className="flex justify-center md:justify-end md:mr-[52px]">
-            <img
-              src="/terapeuta.jpg"
-              alt="Terapeuta"
-              className="w-85 h-auto rounded-xl shadow-lg object-cover"
-            />
-          </div>
-
         </div>
       </section>
 
