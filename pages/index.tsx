@@ -148,8 +148,8 @@ export default function Home() {
               </a>
 
               <a
-                href="#NPRAcademy"
-                className="bg-[#2a9d8f] hover:bg-[#21867a] shadow-md focus:ring-2 focus:ring-offset-2 focus:ring-white text-white px-6 py-3 rounded-xl font-semibold transition"
+                href="#npracademy"
+              className="bg-[#2a9d8f] hover:bg-[#21867a] shadow-md focus:ring-2 focus:ring-offset-2 focus:ring-white text-white px-6 py-3 rounded-xl font-semibold transition"
               >
                 Escolha seu Curso
               </a>
@@ -160,7 +160,7 @@ export default function Home() {
 
       <Sobre />
 
-      <section className="py-20 px-4 text-center bg-white">
+      <section id="npracademy" className="py-20 px-4 scroll-mt-20 text-center bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Conheça a NPR Academy</h2>
           <p className="text-lg text-gray-700 mb-6">
